@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: vidalSuiits
+  database: vidalSuits
   pool: 5
   username: hugo
   password: ''
@@ -9,7 +9,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: vidalSuiits_test
+  database: vidalSuits_test
   pool: 5
   username: hugo
   password: ''
@@ -19,5 +19,3 @@ production:
   host: localhost
   username: user
   database: app-dev
-
-

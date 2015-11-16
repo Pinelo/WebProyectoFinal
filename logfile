@@ -3,3 +3,5 @@ LOG:  MultiXact member wraparound protections are now enabled
 LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
 FATAL:  database "hugo" does not exist
+FATAL:  database "vidalSuiits" does not exist
+FATAL:  database "vidalSuiits" does not exist

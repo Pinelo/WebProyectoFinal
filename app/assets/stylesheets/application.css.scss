@@ -1,0 +1,137 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+#landingBody {
+  background: image-url("traje1.jpeg") no-repeat center center fixed; 
+  height:100vh;
+  width: 100vw;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.imagen { 
+  
+}
+
+#myModalSignin{
+	margin-top: 100px;
+
+}
+
+.message{
+	font-family: "adobe-caslon-pro", "serif";
+	text-align: center;
+	font-weight: 100;
+  	font-size: 90.909px; 
+  	margin-top: -40px; 
+  	display: block;
+}
+
+
+
+#inicialMessage .message{
+	/*margin-top: 200px;*/
+  	animation-name: fadeIn;
+  	animation-duration:4s;
+    color:white;
+}
+
+#inicialMessage {
+    position: absolute;
+    top: 35%;
+    left: 21%;  
+}
+
+#inicialMessage #secondMessage{
+  	animation-name: fadeIn;
+  	animation-duration:10s;
+}
+
+#secondMessage{
+  	font-family: "adobe-caslon-pro", "serif";
+  	text-align: center;
+  	font-weight: 20;
+  	color:#FFF;
+  	font-size: 35px
+}
+
+
+
+@keyframes fadeIn 
+{ from { opacity:0; } 
+  to { opacity:1; } }
+
+
+.modal-body{
+  	/*opacity: 0;*/
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+
+}
+
+#myModalLogin{
+	margin-top: 100px;
+	
+}
+
+/*h4{
+  	font-size: 90.909px; 
+  	margin-top: -40px; 
+  	display: block;
+}*/
+
+header, footer{
+  	background-color: #282828;
+  	position:fixed;
+  	padding: 10px;
+  	box-sizing: border-block;
+  	color:#c3c1c1;
+  	width: 100%;
+  	border-top: 1px solid #000;
+}
+
+footer, footer a{
+  	color:#c3c1c1;
+  	text-decoration: none;
+}
+
+.layout_a{
+  	color:#c3c1c1;
+  	text-decoration: none;
+}
+
+footer{
+  	bottom:0;
+}
+
+
+
+
+
+
+
+
+
+
+
