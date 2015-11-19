@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
 	attr_accessor {}
 	before_save { self.email = email.downcase }
 	
-	validates :address, :telephone, presence: true
 	validates_format_of :email, with: /@/ 
 	validates :telephone, length: {maximum: 11}
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i

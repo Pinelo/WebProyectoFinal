@@ -6,9 +6,9 @@ class UserTest < ActiveSupport::TestCase
   # end
 
   def setup
-    @user = User.new(email: "user@example.com", telephone: "83577871", address: "Leo 200, Col. Contry",
-                      password: "foobar", password_confirmation: "foobar")
+    @user = User.new(email: "user@example.com", telephone: "83577871", address: "Leo 200, Col. Contry", password: "foobar", password_confirmation: "foobar")
   end
+
 
   test "should be valid" do
     assert @user.valid?
@@ -24,15 +24,15 @@ class UserTest < ActiveSupport::TestCase
   #   assert_not @user.valid?
   # end
 
-  test "telephone should be present" do
-    @user.telephone = "     "
-    assert_not @user.valid?
-  end
+  # test "telephone should be present" do
+  #   @user.telephone = "     "
+  #   assert_not @user.valid?
+  # end
 
-  test "address should be present" do
-    @user.address = "     "
-    assert_not @user.valid?
-  end
+  # test "address should be present" do
+  #   @user.address = "     "
+  #   assert_not @user.valid?
+  # end
 
   test "phone should not be too long" do
   	@user.telephone = "1" * 12
@@ -74,5 +74,5 @@ class UserTest < ActiveSupport::TestCase
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
   end
-  
+
 end

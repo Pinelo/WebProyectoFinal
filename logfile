@@ -38,3 +38,12 @@ DETAIL:  Key (email)=(MyString) already exists.
 STATEMENT:  INSERT INTO "users" ("email", "password", "address", "telephone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2015-11-18 23:48:42', '2015-11-18 23:48:42', 298486374)
 ERROR:  column "password" does not exist at character 21
 STATEMENT:  SELECT "id","email","password","address","telephone","created_at","updated_at" FROM "public"."users" ORDER BY "id" LIMIT 25
+ERROR:  column "password" does not exist at character 21
+STATEMENT:  SELECT "id","email","password","address","telephone","created_at","updated_at" FROM "public"."users" ORDER BY "id" LIMIT 25
+ERROR:  column "password" does not exist at character 21
+STATEMENT:  SELECT "id","email","password","address","telephone","created_at","updated_at" FROM "public"."users" ORDER BY "id" LIMIT 25
+ERROR:  database "vidalSuits" is being accessed by other users
+DETAIL:  There are 3 other sessions using the database.
+STATEMENT:  DROP DATABASE IF EXISTS "vidalSuits"
+ERROR:  database "vidalSuits" already exists
+STATEMENT:  CREATE DATABASE "vidalSuits" ENCODING = 'unicode'
