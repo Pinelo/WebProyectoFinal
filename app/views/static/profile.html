@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		  <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+		  <link rel="stylesheet" type="text/css" href="css/maqueta.css" />
+		  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+		  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		  <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+		  <script src="js/bootstrap.js" type="text/javascript"></script>
+		  <meta charset="UTF-8"/>
+	</head>
+	<body>
+
+			
+
+		<section>
+				<div class=" col-md-12 profile">
+					<h1 class="nombreUsuario">Lorem</h1>		
+				</div>	
+
+				<div class="container1 col-md-12">
+					<h3>Email</h3>
+					<p class="emailUsuario">Lorem@itesm.mx</p>
+				</div>
+
+				<div class="container1 col-md-12">
+					<h3>Phone</h3>
+					<p class="phoneUsuario">(81)85713201</p>
+				</div>
+
+				<div class="container1 col-md-12">
+					<h3>Address</h3>
+					<p class="addressUsuario">Rio Navas,San Pedro Garza Garcia, N.L.</p>
+				</div>
+
+				<div class="container1 col-md-12">
+						<h3>Measures</h3>
+						<div class="col-md-4">
+							<span id="neck">Neck Measurement:</span><br>
+							<span id="chest">Chest Measurement:</span><br>
+							<span id="shoulder"> Shoulder Measurement:</span><br>
+							<span id="rightS">Right Sleeve Measurement:</span><br>
+							<span id="leftS">Left Sleeve Measurement:</span><br>
+						</div>
+
+						<div class="col-md-4">
+							<span id="waist">Waist Measurement:</span><br>
+							<span id="hips">Hips Measurement:</span><br>
+							<span id="halfBack">Half Back Measurement:</span><br>
+							<span id="fullBack">Full Back Measurement:</span><br>
+							<span id="knee">Knee Measurement:</span><br>
+						</div>
+
+						<div class="col-md-4">
+							<span id="trouserW">Trouser Waist Measurement:</span><br>
+							<span id="trouserO">Trouser Outseam Measurement:</span><br>
+							<span id="trouserI">Trouser Inseam Measurement:</span><br>
+							<span id="thigh">Thigh Measurement:</span><br>
+							<span id="crotch">Crotch Measurement:</span><br>
+						</div>
+
+						<div class="col-md-6 fin">
+							 <input type="button" id="profileInfo" value="Modify Profile " size="20" data-toggle="modal" data-target="#myModalProfile"/>
+						</div>
+
+						<div class="col-md-6 fin">
+							 <input type="button" id="profileMeasures" value="Modify Measurments" data-toggle="modal" size="20" data-target="#myModalMeasures"/>
+						</div>
+				</div>
+
+
+		</section>
+		
+<div id="myModalProfile" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Information</h4>
+      </div>
+      <div class="modal-body">
+        	
+	     <form role="form">
+			  <div class="form-group">
+			    <label for="email">Email:</label>
+			    <input type="email" class="form-control" id="email">
+			  </div>
+			  <div class="form-group">
+			    <label for="pwd">Phone:</label>
+			    <input type="password" class="form-control" id="phone">
+			  </div>
+			   <div class="form-group">
+			    <label for="address">Address:</label>
+			    <input type="text" class="form-control" id="address">
+			  </div>
+
+			  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="myModalMeasures" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Measures</h4>
+      </div>
+      <div class="modal-body">
+        	
+	     <form role="form">
+			  <div class="form-group">
+			    <label for="measures">Neck:</label>
+			    <input type="text" class="form-control" id="neck1">
+			  </div>
+			  <div class="form-group">
+			    <label for="measures">Chest:</label>
+			    <input type="text" class="form-control" id="chest1">
+			  </div>
+			  <div class="form-group">
+			    <label for="measures">Shoulder:</label>
+			    <input type="text" class="form-control" id="shoulder1">
+			  </div>
+			  <div class="form-group">
+			    <label for="measures">Right Sleeve:</label>
+			    <input type="text" class="form-control" id="rightS1">
+			  </div>
+			  <div class="form-group">
+			    <label for="measures">Left Sleeve:</label>
+			    <input type="text" class="form-control" id="leftS1">
+			  </div>
+			  <div class="form-group">
+			    <label for="measures">Waist:</label>
+			    <input type="text" class="form-control" id="waist1">
+			  </div>
+			  <div class="form-group">
+			    <label for="measures">Hips:</label>
+			    <input type="text" class="form-control" id="hips1">
+			  </div>
+			  <div class="form-group">
+			    <label for="measures">Half Back:</label>
+			    <input type="text" class="form-control" id="halfBack1">
+			  </div>
+			  <div class="form-group">
+			    <label for="measures">Full Back:</label>
+			    <input type="text" class="form-control" id="fullBack1">
+			  </div>
+			  <div class="form-group">
+			    <label for="measures">Knee:</label>
+			    <input type="text" class="form-control" id="knee1">
+			  </div>
+			  <div class="form-group">
+			    <label for="measures">Trouser Waist:</label>
+			    <input type="text" class="form-control" id="trouserW1">
+			  </div>
+			  <div class="form-group">
+			    <label for="measures">Trouser Outsean:</label>
+			    <input type="text" class="form-control" id="trouserO1">
+			  </div>
+			  <div class="form-group">
+			    <label for="measures">Trouser Inseam:</label>
+			    <input type="text" class="form-control" id="trouserI1">
+			  </div>
+			  <div class="form-group">
+			    <label for="measures">Thigh:</label>
+			    <input type="text" class="form-control" id="thigh1">
+			  </div>
+			  <div class="form-group">
+			    <label for="measures">Crotch:</label>
+			    <input type="text" class="form-control" id="crotch1">
+			  </div>
+
+			  
+			  <button type="submit" class="btn btn-default">Submit</button>
+		</form>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		
+
+	</body>
+</html>

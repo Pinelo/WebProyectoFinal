@@ -306,3 +306,54 @@ nav .navbar{
   @include box_sizing;
 
 }
+
+
+.seccion-p{
+  background-color: #000;
+}
+
+.imgProfile{
+  float: left;
+
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+
+}
+
+.profile{
+  width: 100vh;
+  height: 200px;
+  background-color:#000;
+  text-align: center;
+  border-bottom: solid #000 2px; 
+  background: url(../img/telas4.jpg) no-repeat; 
+  background-size: cover;
+
+}
+
+.nombreUsuario{
+  color:#FFF;
+  position:relative;
+  top: 40%;
+ 
+}
+
+
+
+
+.fin{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
