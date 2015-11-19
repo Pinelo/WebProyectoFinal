@@ -21,11 +21,22 @@
 		      </ul>
 		      
 		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#" data-toggle="modal" data-target="#myModalSignin">Sign in</a></li>
-		        <li style="color:white; padding-top:15px">|</li>
-		        <li><a href="#" data-toggle="modal" data-target="#myModalLogin">Log in</a></li>
-		        <li>
-		         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"></li>
+		        <% if logged_in? %>
+			        <li>
+			        	<%= link_to "Log out", logout_path, method: :delete, data: {target: "#myModalLogout", toggle: "modal"} %>
+			        </li>
+		        <% else  %>
+		        	<li>
+			        	<a href="#" data-toggle="modal" data-target="#myModalSignin">Sign in</a>
+			        </li>
+			        <li style="color:white; padding-top:15px">|</li>
+			        <li>
+			        	<a href="#" data-toggle="modal" data-target="#myModalLogin">Log in</a>
+			        </li>
+			        <li>
+			        	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        </li>
+		        <% end %>
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		 </div><!-- /.container-fluid -->

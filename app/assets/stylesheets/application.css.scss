@@ -33,7 +33,7 @@ $gray-medium-light: #eaeaea;
   
 }
 
-#myModalSignin{
+#myModalSignin, #myModalLogin, #myModalLogout{
 	margin-top: 100px;
 
 }
@@ -93,11 +93,6 @@ $gray-medium-light: #eaeaea;
   	-o-background-size: cover;
   	background-size: cover;
 
-}
-
-#myModalLogin{
-	margin-top: 100px;
-	
 }
 
 /*h4{
