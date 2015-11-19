@@ -5,3 +5,36 @@ LOG:  autovacuum launcher started
 FATAL:  database "hugo" does not exist
 FATAL:  database "vidalSuiits" does not exist
 FATAL:  database "vidalSuiits" does not exist
+FATAL:  database "vidalSuits_test" does not exist
+ERROR:  could not create unique index "index_users_on_email"
+DETAIL:  Key (email)=(MyString) is duplicated.
+STATEMENT:  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(MyString) already exists.
+STATEMENT:  INSERT INTO "users" ("email", "password", "address", "telephone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2015-11-18 23:48:42', '2015-11-18 23:48:42', 298486374)
+ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(MyString) already exists.
+STATEMENT:  INSERT INTO "users" ("email", "password", "address", "telephone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2015-11-18 23:48:42', '2015-11-18 23:48:42', 298486374)
+ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(MyString) already exists.
+STATEMENT:  INSERT INTO "users" ("email", "password", "address", "telephone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2015-11-18 23:48:42', '2015-11-18 23:48:42', 298486374)
+ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(MyString) already exists.
+STATEMENT:  INSERT INTO "users" ("email", "password", "address", "telephone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2015-11-18 23:48:42', '2015-11-18 23:48:42', 298486374)
+ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(MyString) already exists.
+STATEMENT:  INSERT INTO "users" ("email", "password", "address", "telephone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2015-11-18 23:48:42', '2015-11-18 23:48:42', 298486374)
+ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(MyString) already exists.
+STATEMENT:  INSERT INTO "users" ("email", "password", "address", "telephone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2015-11-18 23:48:42', '2015-11-18 23:48:42', 298486374)
+ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(MyString) already exists.
+STATEMENT:  INSERT INTO "users" ("email", "password", "address", "telephone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2015-11-18 23:48:42', '2015-11-18 23:48:42', 298486374)
+ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(MyString) already exists.
+STATEMENT:  INSERT INTO "users" ("email", "password", "address", "telephone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2015-11-18 23:48:42', '2015-11-18 23:48:42', 298486374)
+ERROR:  duplicate key value violates unique constraint "index_users_on_email"
+DETAIL:  Key (email)=(MyString) already exists.
+STATEMENT:  INSERT INTO "users" ("email", "password", "address", "telephone", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2015-11-18 23:48:42', '2015-11-18 23:48:42', 298486374)
+ERROR:  column "password" does not exist at character 21
+STATEMENT:  SELECT "id","email","password","address","telephone","created_at","updated_at" FROM "public"."users" ORDER BY "id" LIMIT 25

@@ -9,7 +9,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: vidalSuits_test
+  database: vidalSuits
   pool: 5
   username: hugo
   password: ''
