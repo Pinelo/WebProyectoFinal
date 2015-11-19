@@ -129,7 +129,7 @@ footer{
   width: 100%;
   max-height: 70vh;
   border: #000 solid 5px;
-  margin-bottom: 30px;
+
 }
 
 .title{
@@ -153,7 +153,6 @@ nav .navbar{
 .container1{
   text-align: center;
   color: #636363;
-  margin-bottom: 40px;
 }
 
 .container1 img{
@@ -306,3 +305,113 @@ nav .navbar{
   @include box_sizing;
 
 }
+
+
+.seccion-p{
+  background-color: #000;
+}
+
+.imgProfile{
+  float: left;
+
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+
+}
+
+.profile{
+  width: 100vh;
+  height: 200px;
+  background-color:#000;
+  text-align: center;
+  border-bottom: solid #000 2px; 
+  background: url(../img/telas4.jpg) no-repeat; 
+  background-size: cover;
+
+}
+
+.nombreUsuario{
+  color:#FFF;
+  position:relative;
+  top: 40%;
+ 
+}
+
+
+
+
+.fin{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.odd{
+  background-color: #f6f6f6;
+}
+
+
+.title h2{
+      position: absolute;
+    left: -60px;
+
+}
+
+.gal img{
+    width: 170px;
+    height:170px;
+}
+
+.gal img:hover{
+  animation-name: big;
+    animation-duration:.5s;
+     animation-fill-mode: forwards; 
+}
+
+.container1:last-of-type{
+  margin-bottom: 50px;
+}
+
+.colle .title h2{
+  left: -100px;
+
+}
+
+.colle .even:hover{
+  animation-name: colorEven;
+  animation-duration:.2s;
+  animation-fill-mode: forwards; 
+}
+
+.colle .odd:hover{
+  animation-name: colorOdd;
+  animation-duration:.2s;
+  animation-fill-mode: forwards; 
+}
+
+
+@keyframes big
+{ from { height:170px; width: 170px; } 
+  to { height:250px; width: 250px; } }
+
+@keyframes colorOdd
+{ from { background-color: #f6f6f6; } 
+  to { background-color: #d3d3d3; } }
+
+@keyframes colorEven
+{ from { background-color: #FFF; } 
+  to { background-color: #d3d3d3; } }
+
+
+
+
+
+
+
+
+
+
+
+
+
