@@ -4,9 +4,10 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Contact Request From: <%= @email %></h1>
+    <h1>Meeting Request From: <%= current_user.email %></h1>
     <p>
-      <%= message %>
+		Requested date: <%= date %>, <%= time %>
+      	<%= message %>
     </p>
   </body>
 </html>

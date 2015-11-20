@@ -1,3 +1,4 @@
+
 class UsersController < ApplicationController
 
 
@@ -27,6 +28,12 @@ class UsersController < ApplicationController
 	    else
 	      redirect_to @user
 	    end
+  	end
+
+  	def meeting_mail
+  		# WORKS, BUT IT NEEDS AN EMAIL AND PASSWORD IN development.rb TO USE AS MAIL SENDER 
+  		# UserMailer.contact_mail(params[:message], params[:day], params[:time]).deliver_now
+  		redirect_to current_user
   	end
 
 private
