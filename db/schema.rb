@@ -11,10 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118235337) do
+ActiveRecord::Schema.define(version: 20151120042801) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "measurements", force: :cascade do |t|
+    t.integer  "neck"
+    t.integer  "decimal"
+    t.integer  "chest"
+    t.integer  "shoulder"
+    t.integer  "right_sleeve"
+    t.integer  "left_sleeve"
+    t.integer  "waist"
+    t.integer  "hips"
+    t.integer  "half_back"
+    t.integer  "full_back"
+    t.integer  "knee"
+    t.integer  "trouser_waist"
+    t.integer  "trouser_outsean"
+    t.integer  "trouser_inseam"
+    t.integer  "thigh"
+    t.integer  "crotch"
+    t.integer  "user_id"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"

@@ -327,7 +327,7 @@ nav .navbar{
   background-color:#000;
   text-align: center;
   border-bottom: solid #000 2px; 
-  background: url(../img/telas4.jpg) no-repeat; 
+  background: image-url("telas4.jpg") no-repeat; 
   background-size: cover;
 
 }
@@ -403,15 +403,34 @@ nav .navbar{
 { from { background-color: #FFF; } 
   to { background-color: #d3d3d3; } }
 
+.addSuitImg {
+  cursor: pointer;
+}
 
+.cartSvg {
+    height: 2.5em;
+    width:2.5em;
+    cursor: pointer;
+    transition: fill 0.3s;
+    margin-top: 23%;
+}
 
+svg.cartSvg:hover {
+    fill: white;
+}
 
+button#dropdownMenu1 {
+    background: transparent;
+    border: none;
+}
 
+section.colle .col-md-4.gal:active   {
+  animation-name: highlight-green;
+  animation-duration:1s;
+  animation-fill-mode: forwards;
+}
 
-
-
-
-
-
-
-
+@keyframes highlight-green {
+  0% {background-color: #80e080;}
+  100% {background-color: transparent;}
+}

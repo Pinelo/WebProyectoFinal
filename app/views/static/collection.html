@@ -15,28 +15,25 @@
 
 		<section class="colle">
 
-				<img class = "imgPage" src="img/profile.jpg">
+				<%= image_tag "profile.jpg", class: "imgPage" %>
 				<div class="title">
 					<h2>Collection</h2>
 				</div>
 				<div class="container1 col-md-12 odd">
 					<h3>Basic</h3>
 					<div class="col-md-4 gal">
-						<img src="img/gallery/super1001.jpg">
-						<h4>Suit Name</h4>
-						 <input type="button" id="addCart" value="add" size="20"/>
+						<%= image_tag "gallery/super1001.jpg", class: "addSuitImg", data: {suit_id: "Oxford Grey"} %>
+						<h4>Oxford Grey</h4>
 
 					</div>
 					<div class="col-md-4 gal">
-						<img src="img/gallery/super1002.jpg">
-						<h4>Suit Name</h4>
-						<input type="button" id="addCart" value="add" size="20"/>
+						<%= image_tag "gallery/super1002.jpg", class: "addSuitImg", data: {suit_id: "Midnight Blue"} %>
+						<h4>Midnight Blue</h4>
 
 					</div>
 					<div class="col-md-4 gal">
-						<img src="img/gallery/super1003.jpg">
-						<h4>Suit Name</h4>
-						<input type="button" id="addCart" value="add" size="20"/>
+						<%= image_tag "gallery/super1003.jpg", class: "addSuitImg", data: {suit_id: "Classic Grey"} %>
+						<h4>Classic Grey</h4>
 
 					</div>
 
@@ -44,21 +41,18 @@
 				<div class="container1 col-md-12 even">
 					<h3>Premium</h3>
 					<div class="col-md-4 gal">
-						<img src="img/gallery/super1201.jpg">
-						<h4>Suit Name</h4>
-						 <input type="button" id="addCart" value="add" size="20"/>
+						<%= image_tag "gallery/super1201.jpg", class: "addSuitImg", data: {suit_id: "Dark Grey"} %>
+						<h4>Dark Grey</h4>
 
 					</div>
 					<div class="col-md-4 gal">
-						<img src="img/gallery/super1202.jpg">
-						<h4>Suit Name</h4>
-						<input type="button" id="addCart" value="add" size="20"/>
+						<%= image_tag "gallery/super1202.jpg", class: "addSuitImg", data: {suit_id: "Alpine Blue"} %>
+						<h4>Alpine Blue</h4>
 
 					</div>
 					<div class="col-md-4 gal">
-						<img src="img/gallery/super1203.jpg">
-						<h4>Suit Name</h4>
-						<input type="button" id="addCart" value="add" size="20"/>
+						<%= image_tag "gallery/super1203.jpg", class: "addSuitImg", data: {suit_id: "Gray Chalk Stripe"} %>
+						<h4>Gray Chalk Stripe</h4>
 
 					</div>
 
@@ -67,24 +61,25 @@
 				<div class="container1 col-md-12 odd">
 					<h3>Master</h3>
 					<div class="col-md-4 gal">
-						<img src="img/gallery/super1501.jpg">
-						<h4>Suit Name</h4>
-						 <input type="button" id="addCart" value="add" size="20"/>
+						<%= image_tag "gallery/super1501.jpg", class: "addSuitImg", data: {suit_id: "Grey Fil"} %>
+						<h4>Grey Fil</h4>
 					</div>
 					<div class="col-md-4 gal">
-						<img src="img/gallery/super1502.jpg">
-						<h4>Suit Name</h4>
-						<input type="button" id="addCart" value="add" size="20"/>
+						<%= image_tag "gallery/super1502.jpg", class: "addSuitImg", data: {suit_id: "Grey Bridseye"} %>
+						<h4>Grey Bridseye</h4>
 					</div>
 					<div class="col-md-4 gal">
-						<img src="img/gallery/super1503.jpg">
-						<h4>Suit Name</h4>
-						<input type="button" id="addCart" value="add" size="20"/>
+						<%= image_tag "gallery/super1502.jpg", class: "addSuitImg", data: {suit_id: "Oxford Grey"} %>
+						<h4>Oxford Grey</h4>
 					</div>
 
 				</div>
 
 		</section>
+
+		<%= form_tag addSuit_path, id: "add_suit_form", remote: true do %>
+			<% hidden_field_tag 'suit_id', -1 %>
+		<% end %>
 		
 
 		

@@ -1,5 +1,119 @@
-<% provide(:title, @user.email) %>
-<h1>
-  <%= gravatar_for @user %>
-  <%= @user.email%>
-</h1>
+<!DOCTYPE html>
+<html>
+	<head>
+		  <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+		  <link rel="stylesheet" type="text/css" href="css/maqueta.css" />
+		  <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+		  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		  <script src="js/jquery-1.11.3.min.js" type="text/javascript"></script>
+		  <script src="js/bootstrap.js" type="text/javascript"></script>
+		  <meta charset="UTF-8"/>
+	</head>
+	<body>
+
+			
+
+		<section class="colle">
+				<div class=" col-md-12 profile odd">
+					<h1 class="nombreUsuario">Lorem</h1>		
+				</div>	
+
+				<div class="container1 col-md-12 even">
+					<h3>Email</h3>
+				<p class="emailUsuario"><%= current_user.email %></p>
+				</div>
+
+				<div class="container1 col-md-12 odd">
+					<h3>Phone</h3>
+					<p class="phoneUsuario"><%= current_user.telephone %></p>
+				</div>
+
+				<div class="container1 col-md-12 even">
+					<h3>Address</h3>
+					<p class="addressUsuario"><%= current_user.address %></p>
+				</div>
+
+				<div class="container1 col-md-12 odd">
+						<h3>Measures</h3>
+						<div class="col-md-4">
+							<span id="neck">Neck Measurement: <%= current_user.measurement.neck %> cm </span><br>
+							<span id="chest">Chest Measurement: <%= current_user.measurement.chest %> cm </span><br>
+							<span id="shoulder"> Shoulder Measurement: <%= current_user.measurement.shoulder %> cm </span><br>
+							<span id="rightS">Right Sleeve Measurement: <%= current_user.measurement.right_sleeve %> cm </span><br>
+							<span id="leftS">Left Sleeve Measurement: <%= current_user.measurement.left_sleeve %> cm </span><br>
+						</div>
+
+						<div class="col-md-4">
+							<span id="waist">Waist Measurement: <%= current_user.measurement.waist %> cm </span><br>
+							<span id="hips">Hips Measurement: <%= current_user.measurement.hips %> cm </span><br>
+							<span id="halfBack">Half Back Measurement: <%= current_user.measurement.half_back %> cm </span><br>
+							<span id="fullBack">Full Back Measurement: <%= current_user.measurement.full_back %> cm </span><br>
+							<span id="knee">Knee Measurement: <%= current_user.measurement.knee %> cm </span><br>
+						</div>
+
+						<div class="col-md-4">
+							<span id="trouserW">Trouser Waist Measurement: <%= current_user.measurement.trouser_waist %> cm </span><br>
+							<span id="trouserO">Trouser Outseam Measurement: <%= current_user.measurement.trouser_outsean %> cm </span><br>
+							<span id="trouserI">Trouser Inseam Measurement: <%= current_user.measurement.trouser_inseam %> cm </span><br>
+							<span id="thigh">Thigh Measurement: <%= current_user.measurement.thigh %> cm </span><br>
+							<span id="crotch">Crotch Measurement: <%= current_user.measurement.crotch %> cm </span><br>
+						</div>
+
+						<div class="col-md-6 fin">
+							 <input type="button" id="profileInfo" value="Modify Profile " size="20" data-toggle="modal" data-target="#myModalProfile"/>
+						</div>
+
+						<div class="col-md-6 fin">
+							 <input type="button" id="profileMeasures" value="Modify Measurments" data-toggle="modal" size="20" data-target="#myModalMeasures"/>
+						</div>
+				</div>
+
+
+		</section>
+		
+<div id="myModalProfile" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Information</h4>
+      </div>
+      
+      <div class="modal-body">
+	    <%= render partial: "shared/user_edit_form" %>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="myModalMeasures" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Measures</h4>
+      </div>
+      
+      <div class="modal-body">
+	   <%= render partial: "shared/measurements_edit_form" %>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+		
+
+	</body>
+</html>

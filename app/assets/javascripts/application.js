@@ -15,3 +15,14 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(function() {
+	$('.addSuitImg').on('click', function(e) {
+		$target = $(e.target)
+		// $target.parent().removeClass('clicked').addClass('clicked')
+		$('input[name="suit_id"]').val($target.attr('data-suit-id'))
+		console.log('clicked')
+		$('#add_suit_form').submit()
+	})
+
+});

@@ -20,5 +20,18 @@ class SessionsController < ApplicationController
     redirect_to root_url
   end
 
+  def add_suit_to_cart
+    respond_to do |format|
+      format.js {
+        debugger
+        add_to_cart params[:suit_id]
+        @suit_hash = session[:cart][:suit_id]
+      }
+
+      format.html {
+      }
+    end
+  end
+
 
 end
