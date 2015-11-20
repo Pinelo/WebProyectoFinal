@@ -1,0 +1,27 @@
+<div id="myModalMeeting" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Set up a meeting</h4>
+      </div>
+      <div class="modal-body">
+
+  	    <%= form_tag(contact_mail_path) do  %>
+            <fieldset>
+                    <div class="col-md-12 info">
+                        <%= text_area_tag :message, nil, placeholder: "Message", class: "form-control" %>
+                     </div>
+                <%= submit_tag "Send", id: "comment" %>
+            </fieldset>
+        <% end %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>	

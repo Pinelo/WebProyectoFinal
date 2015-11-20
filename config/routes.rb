@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'about' => 'static#about'
   get 'contact' => 'static#contact'
   get 'fabrics' => 'static#fabrics'
+  post 'contact_mail' => 'static#mail_request'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
