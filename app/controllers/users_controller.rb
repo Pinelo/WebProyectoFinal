@@ -11,11 +11,12 @@ class UsersController < ApplicationController
 	def create
 	    @user = User.new(user_params)    # Not the final implementation!
 	    if @user.save
-	    	@user.create_mesurement
+	    	@user.create_measurement
 		 	flash[:success] = "Bienvenido"
+		 	log_in @user
 	      	redirect_to @user
 	    else
-	      # render root_path
+	      redirect_to root_path
 	    end
   	end
 
@@ -32,7 +33,7 @@ class UsersController < ApplicationController
 
   	def meeting_mail
   		# WORKS, BUT IT NEEDS AN EMAIL AND PASSWORD IN development.rb TO USE AS MAIL SENDER 
-  		# UserMailer.contact_mail(params[:message], params[:day], params[:time]).deliver_now
+  		UserMailer.contact_mail(params[:message], params[:day], params[:time]).deliver_now
   		redirect_to current_user
   	end
 

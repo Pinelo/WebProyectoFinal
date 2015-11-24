@@ -24,30 +24,34 @@ module SessionsHelper
   	def log_out
     	session.delete(:user_id)
     	@current_user = nil
+      reset_session
   	end
 
     def add_to_cart(suit)
       if has_suit?(suit)
         suit_index = find_suit(suit)
-        session[:cart][suit_index][:quantity] = session[:cart][suit_index][:quantity] + 1
+        session[:cart][suit_index]["quantity"] = session[:cart][suit_index]["quantity"] + 1
       else
         session[:cart] << {key: suit, quantity: 1}
       end
     end
 
-
-    private
-
     def find_suit(suit_id)
-      cookes[:cart].each_with_index do |suit, i|
-        return i if suit[:key] == suit_id
+      session[:cart].each_with_index do |suit, i|
+        t = suit["key"] == suit_id
+        return i if t
       end
       return -1
     end
 
+
+    private
+
+    
+
       def has_suit?(suit_id)
         session[:cart].each do |suit| 
-          return true if suit[:key] = suit_id
+          return true if suit["key"] == suit_id
         end
         return false
       end

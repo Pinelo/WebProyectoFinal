@@ -14,8 +14,8 @@
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1", id="cart-drop-down">
-    <%= session[:cart].each do |suit| %>
-    	<li><%= suit[:key] %> <span><%= suit[:quantity] %></span> </li>
+    <% session[:cart].each do |suit| %>
+    	<li style="padding-left:0.5em;" data-suit-id="<%= suit['key'] %>"><%= suit["key"] %> <span style="float:right; color: #FFC600; font-weight:bold; margin-right: 0.5em;"><%= suit["quantity"] %></span> </li>
     <% end %>
   </ul>
 </div>

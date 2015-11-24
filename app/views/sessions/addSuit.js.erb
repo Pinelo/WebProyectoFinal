@@ -1,2 +1,6 @@
-// receives a suit item in @suit
-$('#cart-drop-down').append("<li><%= j @suit[:key] %> <span><%= j @suit[:quantity] %></span> </li>")
+// receives a suit item in @suit_hash
+if ($('#cart-drop-down li[data-suit-id="<%= j @suit_key %>"]').size() > 0 ) {
+	$('#cart-drop-down li[data-suit-id="<%= j @suit_key %>"] span').text(parseInt($('#cart-drop-down li[data-suit-id="<%= j @suit_key%>"] span').text()) + 1)
+} else {
+	$('#cart-drop-down').append("<li data-suit-id='<%= j @suit_key %>'><%= j @suit_key %> <span style='float:right; color: #FFC600; font-weight:bold; margin-right: 0.5em;'><%= j @suit_qty.to_s %></span> </li>")
+}

@@ -16,9 +16,19 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-$('#addSuit').on('click', function(e) {
-	$target = $(e.target);
-	$('input[name="suit_id"]').val($target.attr('data-suit-id'));
-	$()
-})
 
+
+var do_on_load = function() { 
+	$(function() {
+		$('.addSuitImg').on('click', function(e) {
+			$target = $(e.target)
+			// $target.parent().removeClass('clicked').addClass('clicked')
+			$('input[name="suit_id"]').val($target.attr('data-suit-id'))
+			console.log('clicked')
+			$('#add_suit_form').submit()
+		})
+
+	});
+}
+
+$(window).bind('page:change', do_on_load)
